@@ -118,27 +118,40 @@ const styles = {
     margin: "0 auto",
     padding: "20px",
     fontFamily: "Arial, sans-serif",
+    backgroundColor: "#000",  // Black background color
+    color: "#fff",  // White text color
   } as React.CSSProperties,
   header: {
     color: "#ffffff",
     textAlign: "center",
+    fontSize: "24px",  // Adjust the font size
+    fontWeight: "bold",  // Make it bold
+    textTransform: "uppercase",  // Uppercase text
   } as React.CSSProperties,
   date: {
     color: "#666",
     textAlign: "center",
     marginBottom: "20px",
+    fontStyle: "italic",
   } as React.CSSProperties,
   section: {
     marginBottom: "30px",
   } as React.CSSProperties,
   subheader: {
     color: "#ffffff",
+    fontSize: "18px",  // Adjust the font size
+    borderBottom: "1px solid #fff",  // Add an underline
+    paddingBottom: "5px",  // Space between text and underline
+    marginBottom: "10px",  // Space between subheader and content
   } as React.CSSProperties,
   consent: {
     textAlign: "center",
     marginTop: "20px",
     fontStyle: "italic",
+    fontSize: "16px",  // Adjust the font size
+    lineHeight: "1.5",  // Increase line height for better readability
   } as React.CSSProperties,
 };
+
 
 export default PrivacyPolicy;
