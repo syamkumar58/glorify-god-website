@@ -1,4 +1,6 @@
 // Import React and any other necessary modules
+import React from "react";
+import Link from "next/link";
 
 interface Styles {
   [key: string]: React.CSSProperties;
@@ -7,8 +9,12 @@ interface Styles {
 export default function Home() {
   return (
     <main style={styles.container}>
-      <div style={styles.centeredText}>
-        <h1>Glorify God</h1>
+      <div style={styles.topRight}>
+        <Link href="/privacyPolicy">Privacy Policy</Link>
+        {/* <Link href="/requestToDeleteAccount" >Request to delete your account</Link> */}
+      </div>
+      <div style={styles.appHeadingContainer}>
+        <h1 style={styles.centeredText}>Glorify God</h1>
       </div>
     </main>
   );
@@ -16,13 +22,32 @@ export default function Home() {
 
 const styles: Styles = {
   container: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh', // This will make the container take the full height of the viewport
+    width: "100vw",
+    backgroundColor: "red",
+    height: "100vh",
+  },
+  topRight: {
+    justifyContent: "flex-end",
+    display: "flex",
+    width:"100%",
+    backgroundColor: "black",
+    padding: "20px 80px",
+    gap: "20px",
+    alignItems: "center",
+  },
+  appHeadingContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100%",
+    width: "100vw",
+    backgroundColor: "black",
+  
   },
   centeredText: {
-    textAlign: 'center',
-    color: 'white', // Set the text color to white
-  } as React.CSSProperties, // Explicitly cast the style object
+    textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "white", // Set the text color to white
+  }, // Explicitly cast the style object
 };
